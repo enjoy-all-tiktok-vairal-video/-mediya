@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENJOY All</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <h2>🏠 Home</h2>
+  <p>Welcome to ENJOY All</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/movie1.jpg" class="thumb">
+      <button onclick="location.href='ads.html'">🔓 Unlock</button>
+    </div>
+  </div>
+</div>
+
+<!-- BROWSER -->
+<div id="browser" class="page">
+  <h2>📂 Browser</h2>
+  <div class="grid">
+    <div class="card">Episode 1<button onclick="location.href='ads.html'">Watch</button></div>
+    <div class="card">Episode 2<button onclick="location.href='ads.html'">Watch</button></div>
+    <div class="card">Episode 3<button onclick="location.href='ads.html'">Watch</button></div>
+    <div class="card">Episode 4<button onclick="location.href='ads.html'">Watch</button></div>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="page">
+  <div class="card profile-card">
+    <img src="https://i.pravatar.cc/100" class="avatar">
+    <h3>@username</h3>
+    <p>Status: Free</p>
+  </div>
+</div>
+
+<!-- SUPPORT -->
+<div id="support" class="page">
+  <h2>🆘 Support</h2>
+  <a href="https://t.me/Enjoyallvideo_bot" target="_blank">📲 Telegram Bot</a>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <button class="active" onclick="openPage('home', this)">Home</button>
+  <button onclick="openPage('browser', this)">Browser</button>
+  <button onclick="openPage('profile', this)">Profile</button>
+  <button onclick="openPage('support', this)">Support</button>
+</div>
+
+<script>
+function openPage(pageId, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+
+  document.querySelectorAll('.bottom-nav button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
